@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="CommaBoard.Wpf.Resources.UserControls.IntroButtonControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+              xmlns:lib="clr-namespace:CommaBoard.License.Static;assembly=CommaBoard.License"
+             xmlns:local="clr-namespace:CommaBoard.Wpf.Resources.UserControls"
+             xmlns:cv="clr-namespace:CommaBoard.Wpf.Helper"
+             xmlns:pw="clr-namespace:CommaBoard.Wpf.Helper"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/CommaBoard.Wpf;component/Resources/Styles/CommaBoardStyle.xaml">
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border Style="{StaticResource GridBorder}">
+        <Grid Style="{StaticResource IntroViewPanelGrid}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width= "*"/>
+                <ColumnDefinition Width= "auto"/>
+                <ColumnDefinition Width= "auto"/>
+                <ColumnDefinition Width= "auto"/>
+                <ColumnDefinition Width= "*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.Resources>
+                <cv:BooleanVisibilityConverter x:Key="BooleanConverter"/>
+            </Grid.Resources>
+
+            <Grid Style="{StaticResource PanelHeaderGrid}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" >
+                <TextBlock Style="{StaticResource ControlTitleBlock}"  Text="{Binding Path=IntroViewTitle}"  />
+            </Grid>
+
+            <Button Style="{StaticResource IntroButtonStyle}" Command="{Binding ControlButtonCommand}" Grid.Row="1" Grid.Column="1" >
+                <StackPanel>
+                    <Image Width="250" VerticalAlignment="Top">
+                        <Image.Source>
+                            <BitmapImage  UriSource="/Resources/Images/ItemControl.jpg" />
+                        </Image.Source>
+                    </Image>
+                    <TextBlock Style="{StaticResource IntroButtonTextStyle}" Text="{Binding ButtonTextControl}" />
+                </StackPanel>
+            </Button>
+
+            <Button  Style="{StaticResource IntroButtonStyle}" Grid.Row="1" Grid.Column="2" Command="{Binding LoginButtonCommand}" IsEnabled="{Binding Source={x:Static lib:CBLicense.LexLicense}, Path=CurrentUserIsAdmin}"  >
+                <StackPanel VerticalAlignment="Top">
+                    <Image Width="250" VerticalAlignment="Top">
+                        <Image.Source>
+                            <BitmapImage  UriSource="/Resources/Images/ItemSettings.jpg" />
+                        </Image.Source>
+                    </Image>
+                    <TextBlock Style="{StaticResource IntroButtonTextStyle}" Text="{Binding ButtonTextSettings}" />
+                </StackPanel>
+            </Button>
+
+            <Button  Style="{StaticResource IntroButtonStyle}" Grid.Row="1" Grid.Column="3" Command="{Binding HelpButtonCommand}" >
+                <StackPanel VerticalAlignment="Top">
+                    <Image Width="250" VerticalAlignment="Top">
+                        <Image.Source>
+                            <BitmapImage  UriSource="/Resources/Images/ItemHelp.jpg" />
+                        </Image.Source>
+                    </Image>
+                    <TextBlock Style="{StaticResource IntroButtonTextStyle}" Text="{Binding ButtonTextHelp}" />
+                </StackPanel>
+            </Button>
+
+        </Grid>
+    </Border>
+</UserControl>
+

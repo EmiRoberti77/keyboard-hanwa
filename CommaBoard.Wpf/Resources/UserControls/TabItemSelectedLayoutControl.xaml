@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="CommaBoard.Wpf.Resources.UserControls.TabItemSelectedLayoutControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+              xmlns:lib="clr-namespace:CommaBoard.Store.Static;assembly=CommaBoard.Store"
+             xmlns:local="clr-namespace:CommaBoard.Wpf.Resources.UserControls"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/CommaBoard.Wpf;component/Resources/Styles/CommaBoardStyle.xaml">
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="#1A384C" Margin="5" >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+
+        
+        <TextBlock Style="{DynamicResource SettingsTitleBlock}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="Selected Layout" HorizontalAlignment="Center" />
+
+        <TextBlock Style="{DynamicResource SettingsBlock}" Grid.Row="5" Grid.Column="1"  Text="Logical Id:" />
+        <TextBlock Style="{DynamicResource SettingsBlock}" Grid.Row="5" Grid.Column="2"  Text="{Binding Source={x:Static lib:Wave.Grid}, Path=LayoutControlSelectedLayout.logicalId}" />
+
+        <TextBlock Style="{DynamicResource SettingsBlock}" Grid.Row="6" Grid.Column="1"  Text="Name:" />
+        <TextBlock Style="{DynamicResource SettingsBlock}" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3" Text="{Binding Source={x:Static lib:Wave.Grid}, Path=LayoutControlSelectedLayout.name}"  />
+
+        <ScrollViewer Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="4" >
+            <syncfusion:SfDataGrid x:Name="SelectedLayoutDataGrid"   Height="400" Width="350" RowHeight="40"
+                       ItemsSource="{Binding Source={x:Static lib:Wave.Grid}, Path=LayoutControlCameraList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  
+                       SelectedItem="{Binding Source={x:Static lib:Wave.Grid}, Path=LayoutControlSelectedCamera, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"   
+                       AutoGenerateColumns="False">
+                <syncfusion:SfDataGrid.SortColumnDescriptions>
+                    <syncfusion:SortColumnDescription ColumnName="logicalId"/>
+                </syncfusion:SfDataGrid.SortColumnDescriptions>
+                <syncfusion:SfDataGrid.Columns>
+                    <syncfusion:GridNumericColumn HeaderText="Id" MappingName="logicalId" NumberDecimalDigits="0" Width="60" TextAlignment="Center" AllowSorting="true" />
+                    <syncfusion:GridTextColumn HeaderText="Camera Name" MappingName="name" Width="150"  />
+                    <syncfusion:GridTextColumn HeaderText="Camera IP" MappingName="url" Width="150"  />
+                </syncfusion:SfDataGrid.Columns>
+            </syncfusion:SfDataGrid>
+        </ScrollViewer>
+
+
+    </Grid>
+</UserControl>

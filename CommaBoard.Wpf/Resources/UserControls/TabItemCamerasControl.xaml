@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="CommaBoard.Wpf.Resources.UserControls.TabItemCamerasControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+              xmlns:lib="clr-namespace:CommaBoard.Store.Static;assembly=CommaBoard.Store"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/CommaBoard.Wpf;component/Resources/Styles/CommaBoardStyle.xaml">
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="#1A384C" Margin="5" >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="Available Cameras" Style="{DynamicResource SettingsTitleTextBlock}" />
+
+
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" >
+            <syncfusion:SfDataGrid x:Name="AvailableCamerasDataGrid"   Width="350" Height="400" RowHeight="40"
+                       ItemsSource="{Binding Source={x:Static lib:Wave.Grid}, Path=CameraControlCameraList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                       SelectedIndex="{Binding Source={x:Static lib:Wave.Grid}, Path=CameraControlSelectedIndex, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                       SelectedItem="{Binding Source={x:Static lib:Wave.Grid}, Path=CameraControlSelectedCamera, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"            
+                       AutoGenerateColumns="False"
+                       AllowSorting="True"
+                       LiveDataUpdateMode="AllowDataShaping">
+                <syncfusion:SfDataGrid.SortColumnDescriptions>
+                    <syncfusion:SortColumnDescription ColumnName="logicalId" SortDirection="Ascending"/>
+                </syncfusion:SfDataGrid.SortColumnDescriptions>
+                <syncfusion:SfDataGrid.Columns>
+                    <syncfusion:GridNumericColumn HeaderText="Id" MappingName="logicalId" NumberDecimalDigits="0" Width="60" TextAlignment="Center" AllowSorting="true" />
+                    <syncfusion:GridTextColumn HeaderText="Camera Name" MappingName="name" Width="150"  />
+                    <syncfusion:GridTextColumn HeaderText="Camera IP" MappingName="url" Width="150"  />
+                </syncfusion:SfDataGrid.Columns>
+            </syncfusion:SfDataGrid>
+        </ScrollViewer>
+
+        <Button Style="{StaticResource MiniSettingsButton}" Grid.Row="2" Grid.Column="2" Content="Refresh List" Command="{Binding Path=RefreshCamerasCommand}" />
+
+
+
+    </Grid>
+</UserControl>

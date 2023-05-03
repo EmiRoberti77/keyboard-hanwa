@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.WPF\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\UserControls\CameraControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\CBLUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\CreateLayoutControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\CryptexLicenseControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\ForgotPasswordControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\IntroButtonControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\JoystickTestControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\LicenseControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\LiveButtonControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\LogoCommaBoard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\LogoCommandRooms.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\LogoHanWhaTechwin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\MiscControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\PlaybackControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\ResourceControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\SelectedLayoutControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\ServerConnectionControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\TabItemAvailableLayoutsControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\TabItemCamerasControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\TabItemLayoutsControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\TabItemSelectedLayoutControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\UserControls\ViewMessageControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Resources\Styles\CommaBoardStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\CameraControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\CBLUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\CreateLayoutControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\CryptexLicenseControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\ForgotPasswordControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\IntroButtonControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\JoystickTestControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\LicenseControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\LiveButtonControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\LogoCommaBoard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\LogoCommandRooms.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\LogoHanWhaTechwin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\MiscControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\PlaybackControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\ResourceControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\SelectedLayoutControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\ServerConnectionControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\TabItemAvailableLayoutsControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\TabItemCamerasControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\TabItemLayoutsControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\TabItemSelectedLayoutControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\UserControls\ViewMessageControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

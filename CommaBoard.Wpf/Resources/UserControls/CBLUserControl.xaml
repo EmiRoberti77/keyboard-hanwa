@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="CommaBoard.Wpf.Resources.UserControls.CBLUserControl"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cbl="clr-namespace:CommaBoard.License.Static;assembly=CommaBoard.License"
+             xmlns:lib="clr-namespace:CommaBoard.Store.Static;assembly=CommaBoard.Store"
+             xmlns:local="clr-namespace:CommaBoard.Wpf.Resources.UserControls"
+             xmlns:cv="clr-namespace:CommaBoard.Wpf.Helper"
+             xmlns:pw="clr-namespace:CommaBoard.Wpf.Helper"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/CommaBoard.Wpf;component/Resources/Styles/CommaBoardStyle.xaml">
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border Style="{StaticResource GridBorder}">
+        <Grid Style="{StaticResource PanelGrid}">
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width= "*"/>
+                <ColumnDefinition Width= "auto"/>
+                <ColumnDefinition Width= "auto"/>
+                <ColumnDefinition Width= "*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Style="{DynamicResource SettingsTitleBlock}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="CommaBoard Licensed User Control" />
+
+            <TextBlock Style="{DynamicResource DisplayBlock}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Source={x:Static cbl:UserDisplay.CBLUser}, Path=LocationNote}" HorizontalAlignment="Center" />
+
+            <TextBlock Style="{DynamicResource DisplayBlock}" Grid.Row="2" Grid.Column="1" Text="First Name" />
+
+            <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding Path=FirstName, Mode=TwoWay}" Style="{DynamicResource LoginTextBox}"  />
+
+            <TextBlock Style="{DynamicResource DisplayBlock}" Grid.Row="3" Grid.Column="1" Text="Last Name" />
+
+            <TextBox Grid.Row="3" Grid.Column="2" Text="{Binding Path=LastName, Mode=TwoWay}" Style="{DynamicResource LoginTextBox}"  />
+
+            <TextBlock Style="{DynamicResource DisplayBlock}" Grid.Row="4" Grid.Column="1" Text="Email" />
+
+            <TextBox Grid.Row="4" Grid.Column="2" Text="{Binding Path=Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource LoginTextBox}" Foreground="{Binding Path=EmailForeground}"  />
+
+            <TextBlock Style="{DynamicResource DisplayBlock}" Grid.Row="5" Grid.Column="1" Text="Password" IsEnabled="False" />
+
+            <TextBlock Style="{DynamicResource DisplayBlock}" Grid.Row="5" Grid.Column="2" Text="User will be emailed a password link" IsEnabled="False" />
+
+            <TextBlock Style="{DynamicResource DisplayBlock}" Grid.Row="7" Grid.Column="1" Text="User Role" />
+
+            <ComboBox Style="{DynamicResource LoginComboBox}" Grid.Row="7" Grid.Column="2" ItemsSource="{Binding RoleItems}"  SelectedValue="{Binding Path=SelectedRole, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  />
+
+            <Button Style="{DynamicResource SettingsButton}" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Content="Confirm CommaBoard User" Command="{Binding Path=ConfirmNewUser}" />
+
+        </Grid>
+    </Border>
+</UserControl>

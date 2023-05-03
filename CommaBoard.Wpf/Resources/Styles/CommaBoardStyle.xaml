@@ -1,0 +1,465 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--       HanWha Techwin orange from website  #F16738         -->
+    <!--       HanWha Techwin grey from website    #63676A         -->
+
+    <!-- ******************************************************************************* -->
+
+    <!--            COMMABOARD COLOUR BRUSHES           -->
+
+    <!--            View Colours            -->
+
+    <SolidColorBrush x:Key="ViewBackgroundBrush" Color="Black" />
+    <SolidColorBrush x:Key="ViewTitleTextForegroundBrush" Color="AliceBlue" />
+
+    <!--            Border Colours            -->
+
+    <SolidColorBrush x:Key="PanelBorderBrush" Color="GhostWhite" />                <!-- Color="#F16738"  -->
+    <SolidColorBrush x:Key="NumberDisplayBorderBrush" Color="GhostWhite" />
+
+    <!--            Panel ( user control ) Colours            -->
+
+    <SolidColorBrush x:Key="PanelBackgroundBrush" Color="#1A384C" />
+    <SolidColorBrush x:Key="PanelHeaderBackgroundBrush" Color="#5D6B99" />
+    <SolidColorBrush x:Key="PanelHeaderForegroundBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="PanelHeaderBorderBrush" Color="#FF0000" />
+
+    <!--            Button Colours            -->
+
+    <SolidColorBrush x:Key="BaseSettingsButtonBackgroundBrush" Color="LightGray" />
+    <SolidColorBrush x:Key="BaseSettingsButtonForegroundBrush" Color="Black" />
+
+    <SolidColorBrush x:Key="IntroButtonBackgroundBrush" Color="#1A384C" />
+
+    <SolidColorBrush x:Key="DigitButtonBackgroundBrush" Color="#FEFF8C" />
+    <SolidColorBrush x:Key="DigitButtonForegroundBrush" Color="Black" />
+
+    <SolidColorBrush x:Key="DigitAncillaryButtonBackgroundBrush" Color="#B7FFBD" />
+    <SolidColorBrush x:Key="DigitAncillaryButtonForegroundBrush" Color="Black" />
+
+    <SolidColorBrush x:Key="ControlButton01BackgroundBrush" Color="#FCDED7" />
+    <SolidColorBrush x:Key="ControlButton01ForegroundBrush" Color="Black" />
+
+    <SolidColorBrush x:Key="ControlButton02BackgroundBrush" Color="#94D5FF" />
+    <SolidColorBrush x:Key="ControlButton02ForegroundBrush" Color="Black" />
+
+    <SolidColorBrush x:Key="ControlButton03BackgroundBrush" Color="#FFC04D" />
+    <SolidColorBrush x:Key="ControlButton03ForegroundBrush" Color="Black" />
+
+    <SolidColorBrush x:Key="ControlButton04BackgroundBrush" Color="Teal" />
+    <SolidColorBrush x:Key="ControlButton04ForegroundBrush" Color="Black" />
+
+    <!--            Text Colours            -->
+
+    <SolidColorBrush x:Key="IntroTextBackgroundBrush" Color="#1A384C" />
+
+    <SolidColorBrush x:Key="BaseTextBlockBackgroundBrush" Color="#1A384C" />
+    <SolidColorBrush x:Key="BaseTextBlockForegroundBrush" Color="White" />
+
+    <SolidColorBrush x:Key="PanelHeaderTextBackgroundBrush" Color="#5D6B99" />
+
+    <SolidColorBrush x:Key="DisplayMessageBlockBackgroundBrush" Color="White" />
+    <SolidColorBrush x:Key="DisplayMessageBlockForegroundBrush" Color="#1A384C" />
+
+
+    <!--            Label Colours            -->
+
+    <SolidColorBrush x:Key="NumberDisplayLabelForegroundBrush" Color="Yellow" />
+
+    <!--            Tab Control Colours            -->
+
+    <SolidColorBrush x:Key="TabControlBackgroundBrush" Color="#1A384C" />
+    <SolidColorBrush x:Key="TabPanelBackgroundBrush" Color="#1A384C" />
+    <SolidColorBrush x:Key="TabItemBackgroundBrush" Color="White" />
+    <SolidColorBrush x:Key="TabItemForegroundBrush" Color="#1A384C" />
+    <SolidColorBrush x:Key="TabItemHoverBackgroundBrush" Color="White" />
+    <SolidColorBrush x:Key="TabItemHoverForegroundBrush" Color="#1A384C" />
+
+
+    <!-- ******************************************************************************* -->
+
+    <!--            VIEWS               -->
+    
+    <Style x:Key="ViewGrid" TargetType="{x:Type Grid}">
+        <Setter Property="Width" Value="1920" />
+        <Setter Property="Height" Value="1080" />
+        <Setter Property="Background" Value="{StaticResource ViewBackgroundBrush}" />
+    </Style>
+
+    <!--            PANELS               -->
+
+    <Style x:Key="PanelGrid" TargetType="{x:Type Grid}">
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="BorderBrush" Value="{StaticResource PanelBorderBrush}" />
+                <!-- Value="#F16738" />-->
+                <Setter Property="BorderThickness" Value="5" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+        </Style.Resources>
+        <Setter Property="Background" Value="{StaticResource PanelBackgroundBrush}" />
+    </Style>
+
+    <Style x:Key="IntroViewPanelGrid" TargetType="{x:Type Grid}" BasedOn="{StaticResource PanelGrid}">
+        <Setter Property="Width" Value="1200" />
+        <Setter Property="Height" Value="500" />
+    </Style>
+
+    <Style x:Key="GridBorder" TargetType="Border" >
+        <Setter Property="BorderBrush" Value="{StaticResource PanelBorderBrush}" />
+        <Setter Property="BorderThickness" Value="3" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="Margin" Value="3" />
+    </Style>
+
+    <Style x:Key="PanelHeaderGrid" TargetType="{x:Type Grid}">
+        <Setter Property="Background" Value="{StaticResource PanelHeaderBackgroundBrush}" />
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="BorderBrush" Value="{StaticResource PanelHeaderBorderBrush}" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+        </Style.Resources>
+    </Style>
+
+
+    <!--            BUTTONS              -->
+
+    <Style TargetType="{x:Type Button}" x:Key="IntroButtonStyle" >
+        <Setter Property="Margin" Value="50" />
+        <Setter Property="Width" Value="250" />
+        <Setter Property="Height" Value="250" />
+        <Setter Property="Background" Value="{StaticResource IntroButtonBackgroundBrush}" />
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+        </Style.Resources>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Button.Click">
+                <EventTrigger.Actions>
+                    <SoundPlayerAction Source="/Resources/Click.wav"/>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--        Base button style on which all control buttons are based        -->
+    <Style TargetType="{x:Type Button}" x:Key="BaseButtonStyle" >
+        <Setter Property="FontFamily" Value="Segoe Light" />
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Width" Value="160" />
+        <Setter Property="Height" Value="80" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+        </Style.Resources>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Button.Click">
+                <EventTrigger.Actions>
+                    <SoundPlayerAction Source="/Resources/Click.wav"/>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--        Base settings button style on which all settings buttons are based        -->
+    <Style TargetType="{x:Type Button}" x:Key="BaseSettingsButtonStyle" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="Control.Foreground" Value="{StaticResource BaseSettingsButtonForegroundBrush}" />
+        <Setter Property="Control.Background" Value="{StaticResource BaseSettingsButtonBackgroundBrush}" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Width" Value="300" />
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+
+    <!--     Number Pad Buttons 1 to 0              -->
+    <Style x:Key="DigitButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="Control.Foreground" Value="{StaticResource DigitButtonForegroundBrush}" />
+        <Setter Property="Control.Background" Value="{StaticResource DigitButtonBackgroundBrush}" />
+        <Setter Property="Width" Value="80" />
+    </Style>
+
+    <!--     Buttons that also feature on the Number Pad control              -->
+    <Style x:Key="DigitAncillaryButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="Control.Foreground" Value="{StaticResource DigitAncillaryButtonForegroundBrush}" />
+        <Setter Property="Control.Background" Value="{StaticResource DigitAncillaryButtonBackgroundBrush}" />
+    </Style>
+
+    <!--     First style of Control Button              -->
+    <Style x:Key="Type01ControlButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="Control.Foreground" Value="{StaticResource ControlButton01ForegroundBrush}" />
+        <Setter Property="Control.Background" Value="{StaticResource ControlButton01BackgroundBrush}" />
+    </Style>
+
+    <!--     Larger Version              -->
+    <Style x:Key="Type01ControlButtonLarge" TargetType="{x:Type Button}" BasedOn="{StaticResource Type01ControlButton}">
+        <Setter Property="MinWidth" Value="250" />
+    </Style>
+
+    <!--     Smaller Version              -->
+    <Style x:Key="Type01ControlButtonSmall" TargetType="{x:Type Button}" BasedOn="{StaticResource Type01ControlButton}">
+        <Setter Property="MinWidth" Value="120" />
+    </Style>
+
+    <!--     Second style of Control Button              -->
+    <Style x:Key="Type02ControlButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="Control.Foreground" Value="{StaticResource ControlButton02ForegroundBrush}" />
+        <Setter Property="Control.Background" Value="{StaticResource ControlButton02BackgroundBrush}" />
+    </Style>
+
+    <!--     Larger Version              -->
+    <Style x:Key="Type02ControlButtonLarge" TargetType="{x:Type Button}" BasedOn="{StaticResource Type02ControlButton}">
+        <Setter Property="MinWidth" Value="250" />
+    </Style>
+
+    <!--     Smaller Version              -->
+    <Style x:Key="Type02ControlButtonSmall" TargetType="{x:Type Button}" BasedOn="{StaticResource Type02ControlButton}">
+        <Setter Property="Width" Value="120" />
+    </Style>
+
+    <!--     Third style of Control Button              -->
+    <Style x:Key="Type03ControlButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="Control.Foreground" Value="{StaticResource ControlButton03ForegroundBrush}" />
+        <Setter Property="Control.Background" Value="{StaticResource ControlButton03BackgroundBrush}" />
+    </Style>
+
+    <!--     Larger Version              -->
+    <Style x:Key="Type03ControlButtonLarge" TargetType="{x:Type Button}" BasedOn="{StaticResource Type03ControlButton}">
+        <Setter Property="MinWidth" Value="250" />
+    </Style>
+
+    <!--     Smaller Version              -->
+    <Style x:Key="Type03ControlButtonSmall" TargetType="{x:Type Button}" BasedOn="{StaticResource Type03ControlButton}">
+        <Setter Property="MinWidth" Value="120" />
+    </Style>
+
+    <!--     Fourth style of Control Button              -->
+    <Style x:Key="Type04ControlButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="Control.Foreground" Value="{StaticResource ControlButton04ForegroundBrush}" />
+        <Setter Property="Control.Background" Value="{StaticResource ControlButton04BackgroundBrush}" />
+    </Style>
+
+    <!--     Larger Version              -->
+    <Style x:Key="Type04ControlButtonLarge" TargetType="{x:Type Button}" BasedOn="{StaticResource Type04ControlButton}">
+        <Setter Property="MinWidth" Value="250" />
+    </Style>
+
+    <!--     Smaller Version              -->
+    <Style x:Key="Type04ControlButtonSmall" TargetType="{x:Type Button}" BasedOn="{StaticResource Type04ControlButton}">
+        <Setter Property="MinWidth" Value="120" />
+    </Style>
+
+    <!--     Standard Settings Button              -->
+    <Style x:Key="SettingsButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseSettingsButtonStyle}">
+        <Setter Property="MinWidth" Value="300" />
+    </Style>
+
+    <!--     Smaller Version of the Standard Settings Button              -->
+    <Style x:Key="MiniSettingsButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseSettingsButtonStyle}">
+        <Setter Property="Height" Value="30" />
+        <Setter Property="MinWidth" Value="150" />
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Padding" Value="10,5" />
+    </Style>
+
+    <!--     Small Style Title Control Settings Button              -->
+    <Style x:Key="LogOutButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseSettingsButtonStyle}">
+        <Setter Property="Height" Value="30" />
+        <Setter Property="Width" Value="80" />
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Padding" Value="10,5" />
+    </Style>
+
+    <!--            TEXT BLOCKS              -->
+
+    <!--            Base Text Block          -->
+    <Style x:Key="BaseTextBlock"  TargetType="{x:Type TextBlock}" >
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Foreground" Value="{StaticResource BaseTextBlockForegroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource BaseTextBlockBackgroundBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="Padding" Value="10,0" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <!--            Intro Control Title Text            -->
+    <Style x:Key="IntroControlTitleStyle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlock}" >
+        <Setter Property="FontSize" Value="24" />
+    </Style>
+
+    <!--            Text Block Style For Intro Buttons              -->
+    <Style x:Key="IntroButtonTextStyle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlock}" >
+        <Setter Property="Height" Value="100" />
+    </Style>
+
+    <!--            View Title Text            -->
+    <Style x:Key="TitleControlLabelStyle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlock}" >
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="{StaticResource ViewTitleTextForegroundBrush}" />
+    </Style>
+
+    <Style x:Key="TitleControlTextStyle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlock}" >
+
+    </Style>
+
+    <Style x:Key="TitleControlTitleStyle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlock}" >
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="FontSize" Value="24" />
+    </Style>
+
+    <!--            Heading Text For A User Control             -->
+    <Style x:Key="ControlTitleBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlock}">
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Background" Value="{StaticResource PanelHeaderTextBackgroundBrush}" />
+    </Style>
+
+    <!--           Sub-Heading Text For A User Control             -->
+    <Style x:Key="ControlSubHeadingBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlock}">
+        <Setter Property="Margin" Value="20,10,10,10" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style x:Key="DisplayBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlock}">
+        <Setter Property="Margin" Value="20,10,10,10" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+
+    <Style x:Key="SettingsTitleBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlock}">
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="FontSize" Value="20" />
+
+    </Style>
+
+    <Style x:Key="SettingsBlock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlock}">
+        <Setter Property="Margin" Value="20,10,10,10" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style x:Key="DisplayMessageBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="Background" Value="{StaticResource DisplayMessageBlockBackgroundBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource DisplayMessageBlockForegroundBrush}" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
+        <Setter Property="LineHeight" Value="16" />
+        <Setter Property="Padding" Value="10,5,10,5" />
+        <Setter Property="Width" Value="1000" />
+        <Setter Property="MinHeight" Value="50" />
+    </Style>
+
+    <Style x:Key="InformationTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
+        <Setter Property="LineHeight" Value="20" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="MaxWidth" Value="1000" />
+    </Style>
+
+    <!--           Other Text Controls            -->
+    <Style x:Key="SettingsTextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="Margin" Value="20,10,10,10" />
+        <Setter Property="Width" Value="200" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style x:Key="LoginTextBox" TargetType="{x:Type TextBox}">
+        <Setter Property="Margin" Value="20,10,10,10" />
+        <Setter Property="Width" Value="350" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style x:Key="LoginPasswordBox" TargetType="{x:Type PasswordBox}">
+        <Setter Property="Margin" Value="20,10,10,10" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Width" Value="350" />
+        <Setter Property="PasswordChar" Value="*" />
+        <Setter Property="MaxLength" Value="16" />
+    </Style>
+
+    <Style x:Key="LicenseTextBox" TargetType="{x:Type TextBox}" >
+        <Setter Property="Margin" Value="20,10,10,10" />
+        <Setter Property="Width" Value="250" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style x:Key="SettingsPasswordBox" TargetType="{x:Type PasswordBox}">
+        <Setter Property="Margin" Value="20,10,10,10" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Width" Value="200" />
+        <Setter Property="PasswordChar" Value="*" />
+        <Setter Property="MaxLength" Value="16" />
+    </Style>
+
+    <Style x:Key="SettingsCheckBox" TargetType="{x:Type CheckBox}">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Margin" Value="20,10,10,10" />
+        <Setter Property="MinWidth" Value="20" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="DisplayLabel" TargetType="{x:Type Label}">
+        <Setter Property="Foreground" Value="{StaticResource NumberDisplayLabelForegroundBrush}" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="Width" Value="225" />
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="DisplayBorder" TargetType="{x:Type Border}">
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="BorderBrush" Value="{StaticResource NumberDisplayBorderBrush}" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <!--            COMBO BOX              -->
+
+    <Style x:Key="LoginComboBox" TargetType="{x:Type ComboBox}">
+        <Setter Property="Margin" Value="20,10,10,10" />
+        <Setter Property="Width" Value="350" />
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="HorizontalAlignment" Value="Left" />
+    </Style>
+
+    <!--            TABS              -->
+
+    <Style x:Key="TabControl" TargetType="{x:Type syncfusion:TabControlExt}">
+        <Setter Property="Background" Value="{StaticResource TabControlBackgroundBrush}" />
+        <Setter Property="TabPanelBackground" Value="{StaticResource TabPanelBackgroundBrush}" />
+        <Setter Property="TabItemHoverBackground" Value="{StaticResource TabItemHoverBackgroundBrush}" />
+        <Setter Property="TabItemHoverForeground" Value="{StaticResource TabItemHoverForegroundBrush}" />
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="TabStripPlacement" Value="Top" />
+    </Style>
+
+    <Style x:Key="TabItem" TargetType="{x:Type syncfusion:TabItemExt}">
+        <Setter Property="Control.Foreground" Value="{StaticResource TabItemForegroundBrush}"  />
+        <Setter Property="Control.Background" Value="{StaticResource TabItemBackgroundBrush}"  />
+        <Setter Property="Width" Value="120" />
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+        </Style.Resources>
+    </Style>
+
+
+</ResourceDictionary>

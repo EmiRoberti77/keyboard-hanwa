@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="CommaBoard.Wpf.Resources.UserControls.NumberPadControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:local="clr-namespace:CommaBoard.Wpf.Resources.UserControls"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/CommaBoard.Wpf;component/Resources/Styles/CommaBoardStyle.xaml">
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border Style="{StaticResource GridBorder}">
+        <Grid Style="{StaticResource PanelGrid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+            <Grid Style="{StaticResource PanelHeaderGrid}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" >
+                <TextBlock Style="{StaticResource ControlTitleBlock}"  Text="NUMBER PAD CONTROL"  />
+            </Grid>
+            
+            <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Style="{StaticResource DigitAncillaryButton}" Grid.Column="0"   Content="LAYOUT" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="Layout" />
+            <Button Style="{StaticResource DigitAncillaryButton}" Grid.Column="1"   Content="CAMERA" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="Camera" />
+        </Grid>
+        
+        <Button Style="{DynamicResource DigitButton}" Grid.Column="1" Grid.Row="3" Content="1" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="1"  />
+        <Button Style="{DynamicResource DigitButton}" Grid.Column="2" Grid.Row="3" Content="2" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="2"  />
+        <Button Style="{DynamicResource DigitButton}" Grid.Column="3" Grid.Row="3" Content="3" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="3"  />
+        <Button Style="{StaticResource DigitButton}" Grid.Column="1" Grid.Row="4" Content="4" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="4"  />
+        <Button Style="{StaticResource DigitButton}" Grid.Column="2" Grid.Row="4" Content="5" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="5"  />
+        <Button Style="{StaticResource DigitButton}" Grid.Column="3" Grid.Row="4" Content="6" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="6"  />
+        <Button Style="{StaticResource DigitButton}" Grid.Column="1" Grid.Row="5" Content="7" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="7" />
+        <Button Style="{StaticResource DigitButton}" Grid.Column="2" Grid.Row="5" Content="8" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="8"  />
+        <Button Style="{StaticResource DigitButton}" Grid.Column="3" Grid.Row="5" Content="9" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="9"  />
+        <Button Style="{StaticResource DigitButton}" Grid.Column="1" Grid.Row="6" Content="0" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="0" />
+
+        <Button Style="{StaticResource DigitAncillaryButton}" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2"   Content="CLEAR" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="Clear" />
+        <Button Style="{StaticResource DigitAncillaryButton}" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3"  Content="ENTER" Command="{Binding Path=CommaBoardButtonCommand}" CommandParameter="Enter" Width="350" />
+
+
+    </Grid>
+   </Border>
+</UserControl>

@@ -1,0 +1,147 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<Platforms>AnyCPU;x64</Platforms>
+		<PublishSingleFile>true</PublishSingleFile>
+		<SelfContained>true</SelfContained>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<PublishReadyToRun>true</PublishReadyToRun>
+		<Authors>Command Rooms</Authors>
+		<Company>Command Rooms</Company>
+		<Product>HanWha Emulation</Product>
+		<Description>Windows based control emulation for a Wisenet WAVE server/client</Description>
+		<Copyright>2022</Copyright>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="crlogo.ico" />
+    <None Remove="Resources\Images\back.jpg" />
+    <None Remove="Resources\Images\CommaBoardLogo.jpg" />
+    <None Remove="Resources\Images\CommandRoomsLogo.jpg" />
+    <None Remove="Resources\Images\HanWhaLogo.jpg" />
+    <None Remove="Resources\Images\ItemControl.jpg" />
+    <None Remove="Resources\Images\ItemGrids.jpg" />
+    <None Remove="Resources\Images\ItemHelp.jpg" />
+    <None Remove="Resources\Images\ItemJoystickSettings.jpg" />
+    <None Remove="Resources\Images\ItemSettings.jpg" />
+    <None Remove="Resources\Images\Joystick.jpg" />
+    <None Remove="Resources\Images\ledGreen.jpg" />
+    <None Remove="Resources\Images\ledRed.jpg" />
+    <None Remove="Resources\Images\Logos.jpg" />
+    <None Remove="Resources\Images\pnlDown.jpg" />
+    <None Remove="Resources\Images\pnlLeft.jpg" />
+    <None Remove="Resources\Images\pnlRight.jpg" />
+    <None Remove="Resources\Images\pnlUp.jpg" />
+    <None Remove="Resources\Images\UnionJack.jpg" />
+    <None Remove="Resources\Images\WAVElogo.png" />
+    <None Remove="Wav_Alert.wav" />
+    <None Remove="Wav_Interrupt.wav" />
+    <None Remove="Wav_Short.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.31" />
+    <PackageReference Include="MvvmCross.Platforms.Wpf" Version="7.1.2" />
+    <PackageReference Include="NLog" Version="4.7.10" />
+    <PackageReference Include="Syncfusion.SfGrid.WPF" Version="19.4.0.38" />
+    <PackageReference Include="Syncfusion.SfInput.WPF" Version="20.1.0.52" />
+    <PackageReference Include="Syncfusion.Tools.WPF" Version="19.4.0.53" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommaBoard.Comms\CommaBoard.Comms.csproj" />
+    <ProjectReference Include="..\CommaBoard.Core\CommaBoard.Core.csproj" />
+    <ProjectReference Include="..\CommaBoard.Database\CommaBoard.Database.csproj" />
+    <ProjectReference Include="..\CommaBoard.Store\CommaBoard.Store.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Content Include="NLog.config">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+		</Content>
+		<Content Include="CommaBoard.db">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+		</Content>
+	</ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Images\back.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\CommaBoardLogo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\CommandRoomsLogo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ItemControl.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ItemGrids.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ItemHelp.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ItemJoystickSettings.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ItemSettings.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Joystick.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\UnionJack.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\WAVElogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="crlogo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\ledGreen.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\ledRed.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\pnlDown.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\pnlLeft.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\pnlRight.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\pnlUp.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Resources\Images\Logos.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Wav_Alert.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Wav_Interrupt.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Wav_Short.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Images\HanWhaLogo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

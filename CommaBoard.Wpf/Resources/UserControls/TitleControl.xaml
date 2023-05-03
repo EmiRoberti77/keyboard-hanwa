@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="CommaBoard.Wpf.Resources.UserControls.TitleControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lib="clr-namespace:CommaBoard.Store.Static;assembly=CommaBoard.Store"
+             xmlns:cbl="clr-namespace:CommaBoard.License.Static;assembly=CommaBoard.License"
+             xmlns:cv="clr-namespace:CommaBoard.Wpf.Helper"
+             xmlns:local="clr-namespace:CommaBoard.Wpf.Resources.UserControls"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/CommaBoard.Wpf;component/Resources/Styles/CommaBoardStyle.xaml">
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border Style="{StaticResource GridBorder}">
+        <Grid Style="{StaticResource PanelGrid}">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width= "auto"/>
+            <ColumnDefinition Width= "auto"/>
+            <ColumnDefinition Width= "auto"/>
+            <ColumnDefinition Width= "auto"/>
+            <ColumnDefinition Width= "auto"/>
+            <ColumnDefinition Width= "*"/>
+            <ColumnDefinition Width= "auto"/>
+            <ColumnDefinition Width= "*"/>
+            <ColumnDefinition Width= "auto"/>
+            <ColumnDefinition Width= "auto"/>
+            <ColumnDefinition Width= "auto"/>
+            <ColumnDefinition Width= "auto"/>
+            <ColumnDefinition Width= "*"/>
+        </Grid.ColumnDefinitions>
+
+            <Grid.Resources>
+                <cv:BooleanVisibilityConverter x:Key="BooleanConverter"/>
+            </Grid.Resources>
+
+            <Button VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Grid.Column="0" Command="{Binding GoBackCommand}">
+            <Image Source="/Resources/Images/back.jpg" Height="30"/>
+        </Button>
+
+         <TextBlock Style="{StaticResource TitleControlLabelStyle}"  Text="DATE" Grid.Column="1" />
+
+            <TextBlock Style="{StaticResource TitleControlTextStyle}"  Text="{Binding Source={x:Static lib:Display.Numbers}, Path=DisplayDateString}" Grid.Column="2" />
+
+         <TextBlock Style="{StaticResource TitleControlLabelStyle}"  Text="TIME" Grid.Column="3" />
+
+            <TextBlock Style="{StaticResource TitleControlTextStyle}"  Text="{Binding Source={x:Static lib:Display.Numbers}, Path=DisplayTimeString}" Grid.Column="4" />
+
+         <TextBlock Style="{StaticResource TitleControlTitleStyle}"  Text="{Binding ViewTitle}" Grid.Column="6" />
+
+            <TextBlock Style="{StaticResource TitleControlLabelStyle}"  Grid.Column="8" Text="{Binding Source={x:Static cbl:UserDisplay.CBLUser}, Path=LoggedInText}"  />
+
+            <Button Style="{StaticResource LogOutButton}" Grid.Column="9" Content="Log Out" Command="{Binding Path=LogOutCommand}" Visibility="{Binding Source={x:Static cbl:UserDisplay.CBLUser}, Path=LogoutButtonVisible, Converter={StaticResource BooleanConverter}}" />
+
+            <Button Style="{StaticResource LogOutButton}" Grid.Column="9" Content="Confirm" Command="{Binding Path=ConfirmLogOutCommand}" Visibility="{Binding Source={x:Static cbl:UserDisplay.CBLUser}, Path=ConfirmLogoutButtonVisible, Converter={StaticResource BooleanConverter}}" />
+
+            <Button Style="{StaticResource LogOutButton}" Grid.Column="10" Content="Cancel" Command="{Binding Path=CancelLogOutCommand}" Visibility="{Binding Source={x:Static cbl:UserDisplay.CBLUser}, Path=CancelLogoutButtonVisible, Converter={StaticResource BooleanConverter}}" />
+
+        </Grid>
+  </Border>
+</UserControl>

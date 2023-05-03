@@ -1,0 +1,58 @@
+﻿<views:MvxWpfView
+            xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+            xmlns:mvx="clr-namespace:MvvmCross.Platforms.Wpf.Binding;assembly=MvvmCross.Platforms.Wpf" x:Class="CommaBoard.Wpf.Views.IntroView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:uc="clr-namespace:CommaBoard.Wpf.Resources.UserControls"
+             xmlns:cv="clr-namespace:CommaBoard.Wpf.Helper"
+             xmlns:lib="clr-namespace:CommaBoard.License.Static;assembly=CommaBoard.License"
+             xmlns:local="clr-namespace:CommaBoard.Wpf.Views"
+             mc:Ignorable="d" >
+   
+
+    <views:MvxWpfView.Resources>
+        <ResourceDictionary Source="/CommaBoard.Wpf;component/Resources/Styles/CommaBoardStyle.xaml">
+        </ResourceDictionary>
+    </views:MvxWpfView.Resources>
+
+    <Grid Style="{StaticResource ViewGrid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <cv:BooleanVisibilityConverter x:Key="BooleanConverter"/>
+        </Grid.Resources>
+
+        <!--<Image Grid.Row="0" Grid.Column="5" Width="100" VerticalAlignment="Top" Margin="30">
+            <Image.Source>
+                <BitmapImage  UriSource="/Resources/Images/UnionJack.jpg" />
+            </Image.Source>
+        </Image>-->
+
+        <uc:IntroButtonControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Visibility="{Binding Path=ShowIntroButtons, Converter={StaticResource BooleanConverter}}" />
+
+        <uc:LoginControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Visibility="{Binding Path=ShowUserLogin, Converter={StaticResource BooleanConverter}}" />
+
+        <uc:LicenseControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Visibility="{Binding Path=ShowLicenseKey, Converter={StaticResource BooleanConverter}}" />
+
+        <uc:ForgotPasswordControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Visibility="{Binding Path=ShowPasswordReset, Converter={StaticResource BooleanConverter}}" />
+
+        <uc:ViewMessageControl Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" />
+        
+    </Grid>
+
+</views:MvxWpfView>

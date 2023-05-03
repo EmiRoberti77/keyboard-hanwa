@@ -1,0 +1,15 @@
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\bin\x64\Debug\netstandard2.0\CommaBoard.Comms.deps.json
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\bin\x64\Debug\netstandard2.0\CommaBoard.Comms.dll
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\bin\x64\Debug\netstandard2.0\CommaBoard.Comms.pdb
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\bin\x64\Debug\netstandard2.0\CommaBoard.Store.dll
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\bin\x64\Debug\netstandard2.0\PresentationCore.dll
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\bin\x64\Debug\netstandard2.0\System.Windows.Forms.dll
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\bin\x64\Debug\netstandard2.0\CommaBoard.Store.pdb
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\obj\x64\Debug\netstandard2.0\CommaBoard.Comms.csproj.AssemblyReference.cache
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\obj\x64\Debug\netstandard2.0\CommaBoard.Comms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\obj\x64\Debug\netstandard2.0\CommaBoard.Comms.AssemblyInfoInputs.cache
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\obj\x64\Debug\netstandard2.0\CommaBoard.Comms.AssemblyInfo.cs
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\obj\x64\Debug\netstandard2.0\CommaBoard.Comms.csproj.CoreCompileInputs.cache
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\obj\x64\Debug\netstandard2.0\CommaBoard.Comms.csproj.CopyComplete
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\obj\x64\Debug\netstandard2.0\CommaBoard.Comms.dll
+C:\Users\gjpar\source\Production\CommaBoardHanWha\CommaBoard.Comms\obj\x64\Debug\netstandard2.0\CommaBoard.Comms.pdb

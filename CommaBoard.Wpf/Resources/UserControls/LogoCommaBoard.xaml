@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="CommaBoard.Wpf.Resources.UserControls.LogoCommaBoard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CommaBoard.Wpf.Resources.UserControls"
+             mc:Ignorable="d">
+    <Grid Background="#1A384C" Margin="5">
+        <Image Height="80" Margin="5">
+            <Image.Source>
+                <BitmapImage  UriSource="/Resources/Images/CommaBoardLogo.jpg" />
+            </Image.Source>
+        </Image>
+    </Grid>
+</UserControl>

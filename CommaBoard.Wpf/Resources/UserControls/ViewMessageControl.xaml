@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="CommaBoard.Wpf.Resources.UserControls.ViewMessageControl"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CommaBoard.Wpf.Resources.UserControls"
+             xmlns:lib="clr-namespace:CommaBoard.Store.Static;assembly=CommaBoard.Store"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/CommaBoard.Wpf;component/Resources/Styles/CommaBoardStyle.xaml">
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border Style="{StaticResource GridBorder}">
+        <Grid Style="{StaticResource PanelGrid}">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="CommaBoard Messages"  Style="{DynamicResource SettingsBlock}" HorizontalAlignment="Left"  />
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Source={x:Static lib:ViewDisplay.Messages}, Path=ViewMessageContent}"  Style="{DynamicResource DisplayMessageBlock}" Foreground="{Binding Source={x:Static lib:ViewDisplay.Messages}, Path=ViewMessageForeground}" HorizontalAlignment="Left" />
+
+        </Grid>
+    </Border>
+</UserControl>

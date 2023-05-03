@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="CommaBoard.Wpf.Resources.UserControls.ColumnControl"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CommaBoard.Wpf.Resources.UserControls"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/CommaBoard.Wpf;component/Resources/Styles/CommaBoardStyle.xaml">
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border Style="{StaticResource GridBorder}">
+        <Grid Style="{StaticResource PanelGrid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Style="{StaticResource Type04ControlButton}" Grid.Column="1" Content="LIVE" Command="{Binding Path=ShowResourcesCommand}" />
+
+        <Button Style="{StaticResource Type04ControlButton}" Grid.Column="2" Content="PLAYBACK" Command="{Binding Path=ShowPlaybackCommand}" />
+ 
+    </Grid>
+   </Border>
+</UserControl>

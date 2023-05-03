@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+	  <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cryptlex.LexActivator" Version="3.19.0" />
+    <PackageReference Include="MvvmCross" Version="7.1.2" />
+    <PackageReference Include="NAudio" Version="2.0.1" />
+    <PackageReference Include="NLog" Version="4.7.10" />
+    <PackageReference Include="SharpDX.DirectInput" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommaBoard.Comms\CommaBoard.Comms.csproj" />
+    <ProjectReference Include="..\CommaBoard.Database\CommaBoard.Database.csproj" />
+    <ProjectReference Include="..\CommaBoard.License\CommaBoard.License.csproj" />
+    <ProjectReference Include="..\CommaBoard.Store\CommaBoard.Store.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+      <HintPath>PresentationCore.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <HintPath>PresentationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

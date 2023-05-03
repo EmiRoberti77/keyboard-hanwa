@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="CommaBoard.Wpf.Resources.UserControls.JoystickAcquisitionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CommaBoard.Wpf.Resources.UserControls"
+             mc:Ignorable="d" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/CommaBoard.Wpf;component/Resources/Styles/Buttons.xaml">
+                </ResourceDictionary>
+                <ResourceDictionary Source="/CommaBoard.Wpf;component/Resources/Styles/TextStyles.xaml">
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="#1A384C" Margin="5" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width= "auto"/>
+            <ColumnDefinition Width= "auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Style="{DynamicResource DisplayTextBlock}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="Joystick HID Settings" />
+
+        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  Style="{StaticResource SettingsButton}" Content="Search For Attached Devices" Command="{Binding Path=SearchForDevicesCommand}" />
+
+
+        <TextBlock Style="{DynamicResource DisplayTextBlock}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Available HID Joystick found after search" />
+
+        <TextBlock Style="{DynamicResource DisplayTextBlock}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding JoystickName}" Width="350" FontSize="16" />
+
+        <TextBlock Style="{DynamicResource DisplayTextBlock}" Grid.Row="4" Grid.Column="0" Text="Auto detect Joystick" />
+
+        <CheckBox Style="{DynamicResource SettingsCheckBox}" Grid.Row="4" Grid.Column="1" IsChecked="{Binding JoystickRequired}" >
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+
+        <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"  Style="{StaticResource SettingsButton}" Content="Save HID Joystick Values" Command="{Binding Path=SaveDeviceCommand}" />
+
+
+    </Grid>
+</UserControl>
